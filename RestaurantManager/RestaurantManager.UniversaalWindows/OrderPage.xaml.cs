@@ -23,5 +23,9 @@ namespace RestaurantManager.UniversaalWindows {
         public OrderPage1() {
             this.InitializeComponent();
         }
+
+        private void TopAppBarHome_Click(object sender, RoutedEventArgs e) {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

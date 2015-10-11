@@ -18,20 +18,13 @@
             <ColumnDefinition Width="50*" />
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="36">
-            <Run Text="Restaurant Manager" />
-        </TextBlock>
+        <TextBlock Text="Restaurant Manager" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="36"/>
 
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20">
-            <Run Text="Internal Test Version" />
-        </TextBlock>
+        <TextBlock Text="Internal Test Version" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20"/>
 
-        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Run Text="** Go to Orders View **" />
-        </TextBlock>
+        <Button Content="Go to Orders View" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="GotoOrdersViewsButton_Click" />
 
-        <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Run Text="** Submit Order **" />
-        </TextBlock>
+        <Button Content="Submit Order" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SubmitOrderButton_Click"/>
+
     </Grid>
 </Page>
