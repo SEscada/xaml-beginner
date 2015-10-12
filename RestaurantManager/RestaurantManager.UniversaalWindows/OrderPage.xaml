@@ -5,8 +5,13 @@
     xmlns:local="using:RestaurantManager.UniversaalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:RestaurantManager.Models"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <models:DataManager />
+    </Page.DataContext>
+    
     <Page.TopAppBar >
         <CommandBar HorizontalAlignment="Left">
             <AppBarButton Icon="Home" Label="Home" HorizontalAlignment="Left" Click="TopAppBarHome_Click" />
@@ -34,13 +39,13 @@
 
             <TextBlock Text="Order items:" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" />
 
-            <Button Content="Submit Order" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Content="Add to Order" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-            <Button Content="Add to Order" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Content="Submit Order" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-            <ListView Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Margin="10" Background="DarkGreen" />
+            <ListView x:Name="MenuItemsView" ItemsSource="{Binding MenuItems}" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Margin="10" Background="DarkGreen" />
 
-            <ListView Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Margin="10" Background="DarkGoldenrod" />
+        <ListView x:Name="CurrentlySelectedView" ItemsSource="{Binding CurrentlySelectedMenuItems}" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Margin="10" Background="DarkGoldenrod" />
 
         </Grid>
 
